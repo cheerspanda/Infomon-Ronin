@@ -1,4 +1,5 @@
 import { HardhatRuntimeEnvironment } from 'hardhat/types';
+import 'hardhat-deploy';
 
 const deploy = async ({ getNamedAccounts, deployments }: HardhatRuntimeEnvironment) => {
   const { deploy } = deployments;

@@ -6,7 +6,11 @@
     "esModuleInterop": true,
     "outDir": "dist",
     "declaration": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/hardhat-deploy/types"
+    ]
   },
   "include": ["./tasks", "./test", "./scripts/typechain-types"],
   "files": ["./hardhat.config.ts"]

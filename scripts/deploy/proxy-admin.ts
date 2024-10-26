@@ -1,5 +1,6 @@
 import { HardhatRuntimeEnvironment } from 'hardhat/types';
 import ProxyAdmin from 'hardhat-deploy/extendedArtifacts/ProxyAdmin.json';
+import 'hardhat-deploy';
 
 const deploy = async ({ getNamedAccounts, deployments, ethers }: HardhatRuntimeEnvironment) => {
   const { deploy } = deployments;

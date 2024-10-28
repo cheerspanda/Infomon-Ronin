@@ -37,7 +37,7 @@ const mainnet: NetworkUserConfig = {
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: '0.8.19',
+    version: '0.8.27',
     settings: {
       optimizer: {
         enabled: true,
@@ -51,7 +51,7 @@ const config: HardhatUserConfig = {
   paths: {
     sources: './src',
     cache: './cache/hardhat',
-    deploy: ['./scripts/deploy'],
+    deploy: ['./scripts/infomonDeploy'],
   },
   namedAccounts: {
     deployer: 0,

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import "./Infomon/src/ERC721Common.sol";
+import "../ERC721Common.sol";
 
 contract InfomonERC721 is ERC721Common {
     // Event to log the minting process

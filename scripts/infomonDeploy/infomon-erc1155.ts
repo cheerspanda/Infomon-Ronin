@@ -1,18 +1,17 @@
 import { HardhatRuntimeEnvironment } from 'hardhat/types';
-import 'hardhat-deploy';
 
 const deploy = async ({ getNamedAccounts, deployments }: HardhatRuntimeEnvironment) => {
   const { deploy } = deployments;
   let { deployer } = await getNamedAccounts();
 
-  await deploy('SampleERC721', {
+  await deploy('InfomonERC1155', {
     from: deployer,
     log: true,
-    args: ['SampleERC721', 'NFT', 'http://example.com/'],
+    args: ['https://infomonpublicresource.blob.core.windows.net/pet-public/metadata-test-1155/'],
   });
 };
 
-deploy.tags = ['SampleERC721'];
+deploy.tags = ['InfomonERC1155'];
 deploy.dependencies = ['VerifyContracts'];
 
 export default deploy;

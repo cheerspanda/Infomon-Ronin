@@ -7,11 +7,11 @@ const deploy = async ({ getNamedAccounts, deployments }: HardhatRuntimeEnvironme
   await deploy('InfomonERC721', {
     from: deployer,
     log: true,
-    args: ['Infomon', 'INFO', 'https://infomonpublicresource.blob.core.windows.net/pet-public/metadata-test/'],
+    args: ['Infomon Pets', 'INFOMONPETS', 'https://infomonpublicresource.blob.core.windows.net/pet-public/metadata-test/'],
   });
 };
 
-deploy.tags = ['InfomonERC721'];
+deploy.tags = ['InfomonNFT'];
 deploy.dependencies = ['VerifyContracts'];
 
 export default deploy;

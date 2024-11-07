@@ -4,10 +4,10 @@ const deploy = async ({ getNamedAccounts, deployments }: HardhatRuntimeEnvironme
   const { deploy } = deployments;
   let { deployer } = await getNamedAccounts();
 
-  await deploy('InfomonERC1155', {
+  await deploy('InfomonERC721', {
     from: deployer,
     log: true,
-    args: ['https://infomonpublicresource.blob.core.windows.net/pet-public/metadata-test-1155/'],
+    args: ['Infomon Genesis NFT', 'INFOMONGENESIS', 'https://infomonpublicresource.blob.core.windows.net/pet-public/metadata-test-genesis/'],
   });
 };
 

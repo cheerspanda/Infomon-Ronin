@@ -13,3 +13,6 @@ artifacts/
 typechain-types/
 .idea
 .env
+yarn.lock
+deployments/ronin-testnet/InfomonERC721.json
+deployments/ronin-testnet/solcInputs/3138981dab1e9944f6f86bba15623d0d.json

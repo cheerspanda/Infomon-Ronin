@@ -64,7 +64,7 @@ contract InfomonERC1155 is ERC1155, AccessControl {
         emit BurnCalled(msg.sender, tokenId_, amount_);
     }
     
-    // Function: tokenURI
+    // Function: uri
     // Purpose: Constructs and returns the metadata URI for a specific token ID.
     // Parameters:
     //    - _tokenId: The ID of the token whose metadata URI is being requested.
@@ -76,10 +76,11 @@ contract InfomonERC1155 is ERC1155, AccessControl {
     // Requirements:
     //    - The token ID (_tokenId) must correspond to an existing token.
     //    - The base URI (_baseURI) must be correctly set in the contract.
-    function tokenURI(uint256 _tokenId)
-        external
+    function uri(uint256 _tokenId)
+        public
         view
         virtual
+        override
         returns (string memory)
     {
         return string(abi.encodePacked(_baseURI, _tokenId.toString()));
